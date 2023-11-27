@@ -24,9 +24,9 @@ void check(const string& Text, const string& key)
 
 int main(int argc, char **argv)
 {
-    check("SPASITE","0");
-    check("SPASITE","");
-    check("S P A S I T E","66");
-    check("SPASITE","66");
-    check("123456789","66");
+    check("BROWNFOX","01-10");
+    check("BROWNFOX","");
+    check("B R O W N F O X","66");
+    check("BROWNFOX","66");
+    check("1245","66");
 }
