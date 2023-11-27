@@ -17,7 +17,6 @@ class locale;
 class modAlphaCipher
 {
 private:
-    //wstring_convert<codecvt_utf8<wchar_t>, wchar_t> codec;
     wstring numAlpha =L"АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ"; 
     map <char, int> alphaNum; 
     vector <int> key;
