@@ -10,7 +10,7 @@ string modAlphaCipher::decoder(const std::string& cipher_st)
     a = 0;
     for (int colum_number = key; colum_number > 0; colum_number--) { 
         for (int line_number = 0; line_number < nstrok; line_number++) { 
-            position = key*line_number+colum_number; //
+            position = key*line_number+colum_number; 
             if (position-1 < dlina) {
                 n_s[position-1] = s[a];
                 a++;
@@ -19,16 +19,16 @@ string modAlphaCipher::decoder(const std::string& cipher_st)
     }
     return n_s;
 }
-string modAlphaCipher::coder(const string& open_st) // ЗАШИФРОВАНИЕ
+string modAlphaCipher::coder(const string& open_st) 
 {
     string s = getValidText(open_st);
     string n_s = s;
-    int dlina, nstrok, position, a; // dlina-длина строки ; nstrok-количество строк ; position-новая позиция символа, который меняем ;
-    dlina = s.size(); // st-строка с текстом, который вводится пользователем
-    nstrok = (dlina - 1) / key + 1; //key-количество столбцов в таблице
+    int dlina, nstrok, position, a; 
+    dlina = s.size(); 
+    nstrok = (dlina - 1) / key + 1; 
     a = 0;
-    for (int colum_number = key; colum_number > 0; colum_number--) { // colum_number-номер столбца
-        for (int line_number = 0; line_number < nstrok; line_number++) { // line_number-номер строки
+    for (int colum_number = key; colum_number > 0; colum_number--) { 
+        for (int line_number = 0; line_number < nstrok; line_number++) { 
             position = colum_number+key*line_number;
             if (position-1 < dlina) {
                 n_s[a] = open_st[position-1];
